@@ -1,4 +1,4 @@
-import {HomeContainer,UserName,DBHome,ProfileDetails,LogoutText,LogoutIcon,DBProfile,UserImage} from './MainStyledComponents';
+import {HomeContainer,DBHome,DBProfile,CollegeLogoContainer,CollegeLogo,TitleLogoAndContentPage} from './MainStyledComponents';
 import Dashboard from '../Dashboard';
 import {Routes, Route } from 'react-router-dom'
 import MyUpdates from '../MyUpdates';
@@ -27,13 +27,12 @@ const Main = () => (
            
             <DBHome>
                 <DBProfile>
-                <ProfileDetails>
-                    <UserImage src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG.png" alt="User Profile"/>
-                    <UserName>Y Venkateswara Rao</UserName>
-                    <LogoutText>Logout <LogoutIcon/></LogoutText>
-                </ProfileDetails>
                 <Dashboard/>
                 </DBProfile>
+                <TitleLogoAndContentPage>
+                <CollegeLogoContainer>
+                 <CollegeLogo src="https://res.cloudinary.com/dlovqnrza/image/upload/v1684133386/JKC_TITLE_LOGO_jdgrki.jpg" alt="JKC"/>
+               </CollegeLogoContainer>
                 <Routes>
                     <Route path="/" Component={Home}/>
                     <Route path="/my-updates" Component={MyUpdates}/>
@@ -57,15 +56,8 @@ const Main = () => (
                     <Route path="/subject-wise-attendance" Component={SubWiseAttendance}/>
                     <Route path="/consolidated-attendance" Component={ConsolidatedAttendance}/>
                     <Route path="/search-student-with-photo" Component={SearchStudentWithPhoto}/>
-
-
-
-
-
-
-
-
                 </Routes>
+                </TitleLogoAndContentPage>
 
             </DBHome>
 
