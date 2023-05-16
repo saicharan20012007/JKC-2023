@@ -56,3 +56,17 @@ align-self:right;`
 export const HomeContent = styled.div`
 min-height:100vh;
 width:100%;`
+
+export const CollegeLogo = styled.img`
+
+align-self:center;`
+
+export const CollegeLogoContainer = styled.div`
+width:100%;
+`
+
+export const TitleLogoAndContentPage = styled.div`
+display: flex;
+flex-direction:column;
+align-items:center;
+margin-left:290px;`
