@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { NavContainer, SubNavContainer,AttendanceIcon, SubNavItem ,ReportIcon,HomeIcon, NavItem, LinkItem,UpdateIcon} from './DashBoardStyledComponents';
+import { NavContainer, SubNavContainer,ProfileDetails, UserName, UserImage,LogoutText,AttendanceIcon,LogoutIcon, SubNavItem ,ReportIcon,HomeIcon, NavItem, LinkItem,UpdateIcon} from './DashBoardStyledComponents';
 
 
 
@@ -20,6 +20,11 @@ const Dashboard = () => {
   return (
     <>
       <NavContainer>
+      <ProfileDetails>
+                    <UserImage src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG.png" alt="User Profile"/>
+                    <UserName>Y Venkateswara Rao</UserName>
+                    <LogoutText>Logout <LogoutIcon/></LogoutText>
+                </ProfileDetails>
         <LinkItem to = "/">
          <NavItem
           isActive={activeNavItem === 'home'}
