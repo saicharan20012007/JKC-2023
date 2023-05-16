@@ -4,6 +4,7 @@ import {IoHomeOutline} from "react-icons/io5"
 import {RxUpdate} from 'react-icons/rx'
 import {TbReportSearch} from 'react-icons/tb'
 import {MdOutlineCoPresent} from 'react-icons/md'
+import {HiOutlineLogout} from 'react-icons/hi'
 
 
 export const NavContainer = styled.nav`
@@ -11,7 +12,8 @@ export const NavContainer = styled.nav`
   flex-direction: column;
   background-color: #0d0f7c;
   padding: 10px;
-  min-height:60vh;
+  min-height:100vh;
+  position: fixed;
   width:275px;
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
@@ -105,3 +107,41 @@ color:white;
 margin-right:10px;
 border-color:white;
 `
+export const ProfileDetails = styled.div`
+    min-height:175px;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    `
+    export const UserImage = styled.img`
+height:100px;
+width:100px;`
+
+
+export const UserName = styled.h2`
+font-size:17px;
+line-height:24px;
+margin-bottom:0px;
+color:white;`
+
+export const LogoutIcon =  styled(HiOutlineLogout)`
+height:20px;
+width:20px;
+margin-left:10px;
+margin-top:4px;
+color:white;
+`
+
+
+
+export const LogoutText = styled.h4`
+font-size:20px;
+line-height:24px;
+font-weight:400;
+display: flex;
+flex-direction:row;
+justify-content:center;
+align-items:center;
+text-align:right;
+color:white;
+align-self:right;`
