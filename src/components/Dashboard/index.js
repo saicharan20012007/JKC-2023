@@ -75,9 +75,9 @@ const Dashboard = () => {
                     <UserImage src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG.png" alt="User Profile"/>
                     <div><UserName>Y Venkateswara Rao</UserName>
                     <Designation>HOD</Designation>
-         <LogoutText>Logout <LogoutIcon/></LogoutText></div>
+         <LinkItem to="/"><LogoutText>Logout <LogoutIcon/></LogoutText></LinkItem></div>
                 </ProfileDetails>
-        <LinkItem to = "/">
+        <LinkItem to = "/home">
          <NavItem
           isActive={activeNavItem==='home'}
           // onClick={() => handleNavItemClick('home')}

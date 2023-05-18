@@ -3,7 +3,7 @@ import { Routes, Route, useLocation} from 'react-router-dom';
 import Dashboard from '../Dashboard';
 import MyUpdates from '../MyUpdates';
 import Home from '../Home';
-// import LoginForm from '../Login';
+import LoginForm from '../LoginForm';
 import UpdatePassword from '../UpdatePassword';
 import EditMyDetails from '../EditMyDetails';
 import LinkMySubject from '../LinkMySubject';
@@ -25,7 +25,7 @@ import SearchStudentWithPhoto from '../SearchStudentWithPhoto';
 
 const Main = () => {
   const location = useLocation();
-  const isLoginRoute = location.pathname === '/login';
+  const isLoginRoute = location.pathname === '/';
 
   return (
     <HomeContainer>
@@ -35,13 +35,13 @@ const Main = () => {
             <Dashboard />
           </DBProfile>
         )}
-        <TitleLogoAndContentPage>
+        <TitleLogoAndContentPage isLoginRoute={isLoginRoute}>
           <CollegeLogoContainer>
             <CollegeLogo src="https://res.cloudinary.com/dlovqnrza/image/upload/v1684133386/JKC_TITLE_LOGO_jdgrki.jpg" alt="JKC" />
           </CollegeLogoContainer>
             <Routes>
-            <Route path="/" element={<Home />} />
-            {/* <Route path="/login" element={<LoginForm />} /> */}
+            <Route path="/" element={<LoginForm />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/my-updates" element={<MyUpdates />} />
             <Route path="/update-password" element={<UpdatePassword />} />
             <Route path="/edit-my-details" element={<EditMyDetails />} />

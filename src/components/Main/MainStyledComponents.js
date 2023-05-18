@@ -65,8 +65,12 @@ export const CollegeLogoContainer = styled.div`
 width:100%;
 `
 
+
 export const TitleLogoAndContentPage = styled.div`
-display: flex;
-flex-direction:column;
-align-items:center;
-margin-left:290px;`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    ${({ isLoginRoute }) => !isLoginRoute && 'margin-left: 285px;'}
+
+`;
+
