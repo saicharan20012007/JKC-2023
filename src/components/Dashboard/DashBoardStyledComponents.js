@@ -4,7 +4,8 @@ import {IoHomeOutline} from "react-icons/io5"
 import {RxUpdate} from 'react-icons/rx'
 import {TbReportSearch} from 'react-icons/tb'
 import {MdOutlineCoPresent} from 'react-icons/md'
-import {HiOutlineLogout} from 'react-icons/hi'
+import {HiOutlineLogout,HiOutlineChevronDown,HiOutlineChevronRight} from 'react-icons/hi'
+
 
 
 export const NavContainer = styled.nav`
@@ -13,7 +14,7 @@ export const NavContainer = styled.nav`
   background-color: #0d0f7c;
   padding: 10px;
   min-height:100vh;
-  position: fixed;
+  position: absolute;
   width:275px;
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
@@ -36,12 +37,27 @@ export const NavItem = styled.div`
   display: flex;
   align-items  :center ;
   
-
-  
   ${({ isActive }) => isActive && 'background-color: #CD9702;'}
 
 
 `;
+
+export const RightIcon = styled(HiOutlineChevronRight)`
+color:white;
+justify-self: flex-end;
+margin-left:auto;
+margin-right:5px;
+`
+
+export const DownIcon = styled(HiOutlineChevronDown)`
+color:white;
+justify-self: flex-end;
+margin-left:auto;
+margin-right:5px;
+
+
+`
+
 
 
 export const SubNavContainer = styled.div`
@@ -110,12 +126,11 @@ border-color:white;
 export const ProfileDetails = styled.div`
     min-height:175px;
     display:flex;
-    flex-direction:column;
     align-items: center;
     `
     export const UserImage = styled.img`
-height:100px;
-width:100px;`
+height:80px;
+width:80px;`
 
 
 export const UserName = styled.h2`
@@ -145,3 +160,9 @@ align-items:center;
 text-align:right;
 color:white;
 align-self:right;`
+
+export const Designation = styled.p`
+color:white;
+font-size:14px;
+text-align:center;
+margin-top:0px;`
