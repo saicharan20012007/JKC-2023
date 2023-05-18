@@ -1,8 +1,9 @@
-import {HomeContainer,DBHome,DBProfile,CollegeLogoContainer,CollegeLogo,TitleLogoAndContentPage} from './MainStyledComponents';
+import { HomeContainer, DBHome, DBProfile, CollegeLogoContainer, CollegeLogo, TitleLogoAndContentPage } from './MainStyledComponents';
+import { Routes, Route, useLocation} from 'react-router-dom';
 import Dashboard from '../Dashboard';
-import {Routes, Route } from 'react-router-dom'
 import MyUpdates from '../MyUpdates';
 import Home from '../Home';
+// import LoginForm from '../Login';
 import UpdatePassword from '../UpdatePassword';
 import EditMyDetails from '../EditMyDetails';
 import LinkMySubject from '../LinkMySubject';
@@ -22,47 +23,49 @@ import SubWiseAttendance from '../SubWiseAttendance';
 import ConsolidatedAttendance from '../ConsolidatedAttendance';
 import SearchStudentWithPhoto from '../SearchStudentWithPhoto';
 
-const Main = () => (
-        <HomeContainer>
-           
-            <DBHome>
-                <DBProfile>
-                <Dashboard/>
-                </DBProfile>
-                <TitleLogoAndContentPage>
-                <CollegeLogoContainer>
-                 <CollegeLogo src="https://res.cloudinary.com/dlovqnrza/image/upload/v1684133386/JKC_TITLE_LOGO_jdgrki.jpg" alt="JKC"/>
-               </CollegeLogoContainer>
-                <Routes>
-                    <Route path="/" Component={Home}/>
-                    <Route path="/my-updates" Component={MyUpdates}/>
-                    <Route path="/update-password" Component={UpdatePassword}/>
-                    <Route path="/edit-my-details" Component={EditMyDetails}/>
-                    <Route path="/link-my-subject" Component={LinkMySubject}/>
-                    <Route path="/link-my-time-table" Component={LinkMyTimeTable}/>
-                    <Route path="/view-my-time-table" Component={ViewMyTimeTable}/>
-                    <Route path="/delete-linked-subjects" Component={DeleteLinkedSubjects}/>
-                    <Route path="/reports" Component={Reports}/>
-                    <Route path="/student-details" Component={StudentsDetails}/>
-                    <Route path="/delete-linked-subjects" Component={DeleteLinkedSubjects}/>
-                    <Route path="/section-wise-subject-list" Component={SectionWiseSubjectList}/>
-                    <Route path="/all-staff-details" Component={AllStaffDetails}/>
-                    <Route path="/all-staff-details" Component={AllStaffDetails}/>
-                    <Route path="/attendance" Component={Attendance}/>
-                    <Route path="/enter-attendance" Component={EnterAttendance}/>
-                    <Route path="/delete-attendance" Component={DeleteAttendance}/>
-                    <Route path="/hour-wise-attendance" Component={HourWiseAttendance}/>
-                    <Route path="/day-wise-attendance" Component={DayWiseAttendance}/>
-                    <Route path="/subject-wise-attendance" Component={SubWiseAttendance}/>
-                    <Route path="/consolidated-attendance" Component={ConsolidatedAttendance}/>
-                    <Route path="/search-student-with-photo" Component={SearchStudentWithPhoto}/>
-                </Routes>
-                </TitleLogoAndContentPage>
+const Main = () => {
+  const location = useLocation();
+  const isLoginRoute = location.pathname === '/login';
 
-            </DBHome>
-
-        </HomeContainer>
-    )
-
+  return (
+    <HomeContainer>
+      <DBHome>
+        {!isLoginRoute && (
+          <DBProfile>
+            <Dashboard />
+          </DBProfile>
+        )}
+        <TitleLogoAndContentPage>
+          <CollegeLogoContainer>
+            <CollegeLogo src="https://res.cloudinary.com/dlovqnrza/image/upload/v1684133386/JKC_TITLE_LOGO_jdgrki.jpg" alt="JKC" />
+          </CollegeLogoContainer>
+            <Routes>
+            <Route path="/" element={<Home />} />
+            {/* <Route path="/login" element={<LoginForm />} /> */}
+            <Route path="/my-updates" element={<MyUpdates />} />
+            <Route path="/update-password" element={<UpdatePassword />} />
+            <Route path="/edit-my-details" element={<EditMyDetails />} />
+            <Route path="/link-my-subject" element={<LinkMySubject />} />
+            <Route path="/link-my-time-table" element={<LinkMyTimeTable />} />
+            <Route path="/view-my-time-table" element={<ViewMyTimeTable />} />
+            <Route path="/delete-linked-subjects" element={<DeleteLinkedSubjects />} />
+            <Route path="/reports" element={<Reports />} />
+            <Route path="/student-details" element={<StudentsDetails />} />
+            <Route path="/section-wise-subject-list" element={<SectionWiseSubjectList />} />
+            <Route path="/all-staff-details" element={<AllStaffDetails />} />
+            <Route path="/attendance" element={<Attendance />} />
+            <Route path="/enter-attendance" element={<EnterAttendance />} />
+            <Route path="/delete-attendance" element={<DeleteAttendance />} />
+            <Route path="/hour-wise-attendance" element={<HourWiseAttendance />} />
+            <Route path="/day-wise-attendance" element={<DayWiseAttendance />} />
+            <Route path="/subject-wise-attendance" element={<SubWiseAttendance />} />
+            <Route path="/consolidated-attendance" element={<ConsolidatedAttendance />} />
+            <Route path="/search-student-with-photo" element={<SearchStudentWithPhoto />} />
+            </Routes>
+        </TitleLogoAndContentPage>
+      </DBHome>
+    </HomeContainer>
+  );
+};
 
 export default Main;
