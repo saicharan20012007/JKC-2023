@@ -89,11 +89,6 @@ const LoginForm = () => {
   return (
     <div className="login-form-container">
       <form className="form-container" onSubmit={submitForm}>
-        <img
-          src="https://res.cloudinary.com/djdnnecc6/image/upload/v1684337266/Logo_ztptyq.jpg"
-          className="login-website-logo-desktop-img"
-          alt="website logo"
-        />
         <div className="input-container">{renderUsernameField()}</div>
         <div className="input-container">{renderPasswordField()}</div>
         <button type="submit" className="login-button">
