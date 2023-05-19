@@ -14,7 +14,7 @@ export const NavContainer = styled.nav`
   background-color: #0d0f7c;
   padding: 10px;
   min-height:100vh;
-  position: absolute;
+  position: fixed;
   width:275px;
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
