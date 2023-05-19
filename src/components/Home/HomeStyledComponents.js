@@ -30,7 +30,8 @@ export const FounderImage = styled.img`
 height:250px;
 width:200px;
 border-radius: 7px;
-margin:30px;`
+margin:30px;
+margin-bottom:10px;`
 
 export const FounderName = styled.h3`
 color:#c21f35;
@@ -64,3 +65,9 @@ font-family:Roboto;
 line-height:33px;
 margin-left:30px;
 margin-top:0px;`
+
+export const PresidentsImage = styled.img`
+margin-top: 15px;
+margin-bottom: 15px;
+
+`
