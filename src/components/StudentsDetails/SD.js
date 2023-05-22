@@ -20,3 +20,9 @@ font-size:20px;
 line-height:28px;
 font-weight:600;
 `
+
+export const OptionsContainer = styled.div`
+border-style:solid;
+height:100px;
+width:100%;
+display:flex;`
